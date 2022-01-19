@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("/css/pexels-karolina-grabowska-6256066.jpg") ;
+
+}
+
+
+.grid-container{
+    margin-top: 100px;
+    background-color: rgb(0, 0, 0);
+    height: auto;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px) ;
+    grid-template-rows: minmax(120px, auto)repeat(5, 100px) ;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+    border-radius: 1rem;
+    
+}
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-size: 36px;
+    gap: 15px;
+}
+
+.screen > .previous-op{
+    font-size: 24px;
+    color: rgb(109, 107, 107);
+}
+button{
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+
+}
+button:hover{
+    background-color: rgb(58, 58, 58);
+}
+#span-two{
+    grid-column: span 2;
+}
+
+.screen{
+    grid-column: 1 / -1;
+    background-color: rgba(32, 31, 31, 0.75);
+}
+
+.operator, .equals{
+    background-color: rgba(15, 15, 15, 0.75);
+    border-radius: 100%;
+}
+.equals{
+    background-color: red;
+}
+.equals:hover{
+    background-color: rgb(252, 58, 58);
+}
