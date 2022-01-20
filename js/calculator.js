@@ -39,7 +39,7 @@ operatorButtons.forEach( operator => {
         }else{
             result = parseFloat(num2);                      // num2 is a string, convert to number
         }
-        clearScreen2(operationName)
+        clearScreen2(operationName);
         operation = operationName;
     })
 })
@@ -51,7 +51,9 @@ equalsButton.addEventListener('click', (e) => {        //Check if both num prese
     }
     haveDot = false;                                   
     calculate();                                        //excetue calculation
-    clearScreen2()                                      // move to upper screen
+    clearScreen2();                                     // move to upper screen
+    firstDisplay.innerText = firstDisplay.innerText     
+        + ` ${num2} = `;
     secondDisplay.innerText = result;                   // displey the result
     num2 = '';                                          // reset variables
     num1 = '';
@@ -79,13 +81,13 @@ const allClear = () =>{
 
 const del = () =>{
     let current =secondDisplay.innerText;
-    secondDisplay.innerText = current.slice(0, -1)
+    secondDisplay.innerText = current.slice(0, -1);
 
     num2 = secondDisplay.innerText ;
 };
 
 const clearScreen2 = (name = '') =>{                     // Passes the number and operator to top screen
-    num1 += num2 + ' ' + name + ' ';
+    num1 +=  `${num2} ${name} `;
     firstDisplay.innerText = num1;              
     secondDisplay.innerText = '';                        //Clear the second display
     num2 = '';                                           //Clear the num2 variable
@@ -109,7 +111,7 @@ const calculate = () =>{                                //Check operator and cal
     }else if(operation === '%'){
         result = parseFloat(result) % parseFloat(num2);
     };
-    console.log(result)
+    console.log(result);
 }
   
 
