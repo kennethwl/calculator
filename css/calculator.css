@@ -16,24 +16,35 @@ body{
     grid-template-rows: minmax(120px, auto)repeat(5, 100px) ;
     justify-content: center;
     align-content: center;
-    padding: 15px;
+    padding: 20px;
     border-radius: 1rem;
+    gap: 5px;
     
 }
 .screen{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-around;
+    text-align: right;
     color: white;
     font-size: 36px;
-    gap: 15px;
+    gap: 20px;
+    border-radius: 1rem;
+    padding: 10px;
+    
 }
 
-.screen > .previous-op{
+.screen > .display1{
     font-size: 24px;
     color: rgb(109, 107, 107);
+    height: 24px;
+     
 }
+.screen .display2{
+    height: 42;
+    width: 390px;;
+}
+
 button{
     cursor: pointer;
     font-size: 2rem;
@@ -58,6 +69,7 @@ button:hover{
 .operator, .equals{
     background-color: rgba(15, 15, 15, 0.75);
     border-radius: 100%;
+   
 }
 .equals{
     background-color: red;
